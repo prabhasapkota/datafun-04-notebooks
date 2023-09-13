@@ -15,13 +15,11 @@ In Windows, use PowerShell, in Mac, use bash.
 Verify you've added some essential packages to your default Python environment.
 
 ```shell
-python -m pip install --upgrade pip ipykernel jupyterlab
-python -m pip install --upgrade black ruff
+python3 -m pip install --upgrade pip ipykernel jupyterlab
+python3 -m pip install --upgrade black ruff
 ```
 
-Note: If `py` or `python3` works on your machine, use that instead of `python` in the commands.
 
------
 
 ## Step 3: Add Common Files
 
@@ -55,7 +53,7 @@ Next, we'll create and activate a virtual environment specifically for this proj
 2. Run the following command to **create** a virtual environment for this project.
 
 ```shell
-python -m venv .venv
+python3 -m venv .venv
 ```
 
 Verify that a new `.venv` folder was created. It may take a while for the command to complete.
@@ -66,7 +64,6 @@ Verify that a new `.venv` folder was created. It may take a while for the comman
 
 Wait for the creation to finish, then **activate** the virtual environment:
 
-- For PowerShell: `.venv\Scripts\Activate`
 - For macOS/Linux:  `source .venv/bin/`
 
 🚀 Rocket Tip: Notice the terminal changes to reflect the active virtual environment.
@@ -78,15 +75,15 @@ The packages ipykernel and jupyterlab are required to run a notebook.
 The packages pandas, matplotlib, and seaborn are used to work with data and charts.
 
 ```shell
-python -m pip install --upgrade pip ipykernel jupyterlab
-python -m pip install --upgrade pandas matplotlib seaborn
-python -m pip install --upgrade voila
+python3 -m pip install --upgrade pip ipykernel jupyterlab
+python3 -m pip install --upgrade pandas matplotlib seaborn
+python3 -m pip install --upgrade voila
 ```
 
 Alternatively, you can install all the packages listed in the requirements.txt file.
 
 ```shell
-python -m pip install --upgrade -r requirements.txt
+python3 -m pip install --upgrade -r requirements.txt
 ```
 
 Note: The `--upgrade` parameter gets the latest version of each package.
@@ -98,7 +95,7 @@ Note: The `--upgrade` parameter gets the latest version of each package.
 In the active virtual environment, create a Python kernel to run our notebooks. 
 
 ```shell
-python -m ipykernel install --user --name .venv --display-name "Python (.venv)"
+python3 -m ipykernel install --user --name .venv --display-name "Python (.venv)"
 ```
 
 ### Create a new notebook
